@@ -20,11 +20,13 @@ function App() {
 	}
 
   //using the array in state (useTasks)
-  //handleDelete fn is a prop sent down to grandchild Task.js
+  //fns a prop made avail to grandchildren
   return (
     <div className="App">
       <h2>My tasks</h2>
-      <CategoryFilter />
+      <CategoryFilter
+        categories={CATEGORIES}
+      />
       <NewTaskForm />
       <TaskList
         tasks={tasksState}
