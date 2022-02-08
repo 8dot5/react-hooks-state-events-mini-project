@@ -1,6 +1,6 @@
 import React from "react";
 
-function Task({ text, category, deleteTaskFnProp }) {
+function Task({ text, category, handleDelete }) {
   // console.log(text)
 
   //to remove the task from the DOM
@@ -16,7 +16,7 @@ function Task({ text, category, deleteTaskFnProp }) {
       <div className="label">{text}</div>
       <div className="text">{category}</div>
       <button
-        onClick={deleteTaskFnProp}
+        onClick={() => handleDelete(text)}
         className="delete"
         >X
         </button>
